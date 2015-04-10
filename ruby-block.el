@@ -44,11 +44,11 @@
 
 ;;; Note:
 
-;; A ruby-mode.el is necessary to use this package.
+;; A enh-ruby-mode.el is necessary to use this package.
 
 ;;; Code:
 
-(require 'ruby-mode)
+(require 'enh-ruby-mode)
 
 ;; Variables:
 
@@ -103,17 +103,15 @@ t          => minibuffer and overlay"
 ;; Functions:
 
 (define-minor-mode ruby-block-mode
-  "In ruby-mode, Displays the line where there is keyword corresponding
-to END keyword. this is Minor mode for ruby-mode only."
+  "In enh-ruby-mode, Displays the line where there is keyword corresponding
+to END keyword. this is Minor mode for enh-ruby-mode only."
   :init-value t
   :global nil
   :keymap nil
   :lighter " RBlock"
   (if ruby-block-mode
       (ruby-block-start-timer)
-    (ruby-block-stop-timer)))
-
-(defun ruby-block-start-timer ()
+    (ruby-block-stop-timer))) ruby-block-start-timer ()
   "start timer."
   (when ruby-block-timer
     (cancel-timer ruby-block-timer))
@@ -127,8 +125,8 @@ to END keyword. this is Minor mode for ruby-mode only."
     (setq ruby-block-timer nil)))
 
 (defun ruby-block-hook ()
-  "When Major-mode is ruby-mode, this package is running."
-  (if (eq major-mode 'ruby-mode)
+  "When Major-mode is enh-ruby-mode, this package is running."
+  (if (eq major-mode 'enh-ruby-mode)
       (condition-case err
           (ruby-block-function)
         (error
