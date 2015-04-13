@@ -109,10 +109,10 @@ to END keyword. this is Minor mode for enh-ruby-mode only."
   :global nil
   :keymap nil
   :lighter " RBlock"
-  ;; (if ruby-block-mode
-  ;;     (ruby-block-start-timer)
-  ;;   (ruby-block-stop-timer))) ruby-block-start-timer ()
-  ;; "start timer."
+  (if ruby-block-mode
+      (ruby-block-start-timer)
+    (ruby-block-stop-timer))) ruby-block-start-timer ()
+  "start timer."
   (when ruby-block-timer
     (cancel-timer ruby-block-timer))
   (setq ruby-block-timer
