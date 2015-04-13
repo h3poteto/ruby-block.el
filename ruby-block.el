@@ -111,7 +111,9 @@ to END keyword. this is Minor mode for enh-ruby-mode only."
   :lighter " RBlock"
   (if ruby-block-mode
       (ruby-block-start-timer)
-    (ruby-block-stop-timer))) ruby-block-start-timer ()
+    (ruby-block-stop-timer)))
+
+(defun ruby-block-start-timer ()
   "start timer."
   (when ruby-block-timer
     (cancel-timer ruby-block-timer))
