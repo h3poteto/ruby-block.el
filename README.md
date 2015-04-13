@@ -6,8 +6,8 @@ When you use enhanced-ruby-mode instead of ruby-mode, you can not use ruby-block
 Because ruby-block require ruby-mode.
 
 
-So I customized for enhanced-ruby-mode.
-You can use ruby-block in enhanced-ruby-mode, if you yus this ruby-block.el.
+So I customized ruby-block.el for enhanced-ruby-mode.
+You can use ruby-block in enhanced-ruby-mode, if you use this ruby-block.el.
 
 
 Original ruby-block.el is [adolfosousa/ruby-block.el](https://github.com/adolfosousa/ruby-block.el).
